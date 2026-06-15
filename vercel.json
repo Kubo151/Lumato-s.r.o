@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/vzor", "dest": "/vzor.html" },
+    { "src": "/prud", "dest": "/prud.html" },
+    { "src": "/svetlo", "dest": "/svetlo.html" }
+  ]
+}

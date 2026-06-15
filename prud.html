@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lumato s.r.o. – Profesionálne maľovanie a tapetovanie. 30 rokov skúseností. Prešov a okolie.">
+<title>Lumato s.r.o. | Maľovanie & Tapetovanie Prešov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#FAFAF8;color:#111111;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+.design-bar{background:#111;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,0.32);letter-spacing:0.06em}
+.design-bar a{color:rgba(232,103,58,0.8);margin-left:12px}
+.design-bar .cur{color:#E8673A;font-weight:600}
+
+.site-nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 56px;background:rgba(250,250,248,0.97);backdrop-filter:blur(12px);border-bottom:1px solid #E4E4DE}
+.nav-logo{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.02em;color:#111}
+.nav-logo span{color:#E8673A}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:13px;color:rgba(17,17,17,0.48);transition:color 0.2s}
+.nav-links a:hover{color:#111}
+.nav-cta{padding:10px 22px;background:#111;font-size:12px;font-weight:500;color:#fff!important;transition:background 0.2s}
+.nav-cta:hover{background:#E8673A}
+
+.hero{min-height:88vh;display:flex;align-items:center;padding:80px 56px;position:relative;overflow:hidden;background:#FAFAF8}
+.hero-blob{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:600px;height:600px;pointer-events:none;z-index:1;opacity:0.88}
+.hero-con{position:relative;z-index:10;max-width:580px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;background:#E8673A;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px;border-radius:2px}
+.chip-dot{width:5px;height:5px;background:#fff;border-radius:50%}
+h1{font-family:'Syne',sans-serif;font-size:clamp(50px,6vw,88px);font-weight:800;line-height:0.92;letter-spacing:-0.03em;margin-bottom:26px}
+h1 .acc{color:#E8673A}
+.hero-sub{font-size:16px;line-height:1.72;color:#666;max-width:440px;margin-bottom:40px}
+.ctas{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 34px;font-size:13px;font-weight:500;letter-spacing:0.02em;transition:all 0.2s;cursor:pointer}
+.btn-dark{background:#111;color:#fff}
+.btn-dark:hover{background:#E8673A}
+.btn-link{font-size:13px;color:#E8673A;display:flex;align-items:center;gap:6px;padding:15px 0}
+.btn-link:hover{color:#111}
+.hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid #E4E4DE;padding-top:0}
+.h-stat{flex:1;padding:28px 0;border-right:1px solid #E4E4DE}
+.h-stat:last-child{border-right:none}
+.s-num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:#E8673A;display:block;line-height:1}
+.s-lbl{display:block;font-size:11px;color:#999;margin-top:5px}
+
+.services{padding:88px 56px;border-top:1px solid #E4E4DE;background:#FAFAF8}
+.sec-eye{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#E8673A;margin-bottom:10px;display:block}
+h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;letter-spacing:-0.02em;margin-bottom:44px;color:#111}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.srv-card{background:#fff;padding:36px 28px;border:1px solid #E8E8E2;transition:all 0.25s}
+.srv-card:hover{border-color:#E8673A;transform:translateY(-2px);box-shadow:0 8px 32px rgba(232,103,58,0.08)}
+.srv-n{font-family:'Syne',sans-serif;font-size:12px;color:#E8673A;font-weight:700;letter-spacing:0.1em;margin-bottom:18px;display:block}
+.srv-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;margin-bottom:10px;color:#111}
+.srv-desc{font-size:14px;line-height:1.72;color:#777}
+
+.about{padding:88px 56px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;background:#F4F4F0;border-top:1px solid #E4E4DE}
+.about-lbl{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#E8673A;margin-bottom:14px;display:block}
+.about-text{font-size:15px;line-height:1.84;color:#555;margin-bottom:24px}
+.about-rule{width:44px;height:3px;background:#E8673A;margin-bottom:22px}
+.about-link{color:#111;font-size:13px;border-bottom:2px solid #E8673A;padding-bottom:2px;font-weight:500}
+.about-link:hover{color:#E8673A}
+.s4-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.s4-box{background:#fff;padding:28px 24px;border:1px solid #E8E8E2}
+.s4-big{font-family:'Syne',sans-serif;font-size:38px;color:#E8673A;font-weight:800;display:block;line-height:1;letter-spacing:-0.02em}
+.s4-desc{font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:#999;margin-top:8px;display:block}
+
+.cta-sec{padding:88px 56px;text-align:center;background:#111;border-top:1px solid #222}
+.cta-sec .sec-eye{color:#E8673A}
+.cta-sec h2{color:#fff;margin-bottom:0}
+.cta-sec h2 em{font-style:normal;color:#E8673A}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.5);margin:14px 0 36px}
+.btn-orange{background:#E8673A;color:#fff;padding:15px 34px;font-size:13px;font-weight:500;display:inline-block;transition:background 0.2s}
+.btn-orange:hover{background:#d4562a}
+.btn-outline{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:14px 34px;font-size:13px;font-weight:500;display:inline-block;margin:4px 6px;transition:all 0.2s}
+.btn-outline:hover{border-color:#E8673A;color:#E8673A}
+.cta-contact{margin-top:28px;color:rgba(255,255,255,0.28);font-size:14px}
+.cta-contact a{color:#E8673A}
+
+.site-footer{padding:36px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:#0D0D0B;border-top:1px solid #222}
+.f-logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#E8673A}
+.f-info{font-size:13px;color:rgba(255,255,255,0.25);text-align:center}
+.f-links a{color:rgba(255,255,255,0.3);font-size:13px;margin-left:16px}
+.f-links a:hover{color:#E8673A}
+
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:40px}}
+@media(max-width:768px){
+  .site-nav,.hero,.services,.about,.cta-sec,.site-footer{padding-left:20px;padding-right:20px}
+  .design-bar{padding:8px 20px;font-size:10px}
+  .nav-links{display:none}
+  .hero-stats{flex-direction:column}
+  .h-stat{border-right:none;border-bottom:1px solid #E4E4DE;padding:20px 0}
+  h1{font-size:clamp(42px,10vw,60px)}
+}
+</style>
+</head>
+<body>
+
+<div class="design-bar">
+  <span>Lumato s.r.o. — Design koncepty</span>
+  <span><a href="vzor.html">01 · Vzor</a><span class="cur">02 · Prúd</span><a href="svetlo.html">03 · Svetlo</a></span>
+</div>
+
+<nav class="site-nav">
+  <a href="#" class="nav-logo">LU<span>·</span>MA<span>·</span>TO</a>
+  <div class="nav-links">
+    <a href="#sluzby">Služby</a>
+    <a href="#o-nas">O nás</a>
+    <a href="#kontakt" class="nav-cta">Kontakt</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <!-- Paint pour blob -->
+  <svg class="hero-blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="bg" cx="36%" cy="43%" r="58%">
+        <stop offset="0%" stop-color="#3B8A9E"/>
+        <stop offset="38%" stop-color="#E8673A" stop-opacity="0.88"/>
+        <stop offset="78%" stop-color="#F5C430" stop-opacity="0.72"/>
+        <stop offset="100%" stop-color="#F5C430" stop-opacity="0.05"/>
+      </radialGradient>
+    </defs>
+    <path d="M255 68C338 47 432 90 456 176C480 262 455 342 397 386C347 428 278 453 212 431C146 409 103 352 109 292C115 232 148 163 202 124C232 103 220 80 255 68Z" fill="url(#bg)" opacity="0.88"/>
+    <ellipse cx="397" cy="432" rx="10" ry="30" fill="#E8673A" opacity="0.48" transform="rotate(-12 397 432)"/>
+    <ellipse cx="178" cy="456" rx="7" ry="22" fill="#3B8A9E" opacity="0.38"/>
+    <circle cx="462" cy="226" r="14" fill="#F5C430" opacity="0.52"/>
+    <circle cx="477" cy="306" r="8" fill="#E8673A" opacity="0.44"/>
+    <circle cx="88" cy="282" r="9" fill="#3B8A9E" opacity="0.28"/>
+    <circle cx="444" cy="158" r="6" fill="#E8673A" opacity="0.38"/>
+  </svg>
+  <div class="hero-con">
+    <div class="chip"><span class="chip-dot"></span>Nová éra. Nové farby.</div>
+    <h1>Dajte<br><span class="acc">farbu</span><br>vášmu domovu.</h1>
+    <p class="hero-sub">Maľovanie, tapetovanie a povrchová úprava interiérov aj exteriérov. Prešov a okolie. 30 rokov skúseností v novom šate.</p>
+    <div class="ctas">
+      <a href="#kontakt" class="btn btn-dark">Nezáväzná obhliadka</a>
+      <a href="#sluzby" class="btn-link">Naše služby <span>→</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><span class="s-num">30</span><span class="s-lbl">Rokov skúseností</span></div>
+      <div class="h-stat"><span class="s-num">1 000+</span><span class="s-lbl">Projektov</span></div>
+      <div class="h-stat"><span class="s-num">100%</span><span class="s-lbl">Spokojnosť</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="sluzby">
+  <span class="sec-eye">Čo robíme</span>
+  <h2>Naše služby</h2>
+  <div class="srv-grid">
+    <div class="srv-card">
+      <span class="srv-n">01</span>
+      <div class="srv-title">Maľovanie interiérov</div>
+      <p class="srv-desc">Byty, rodinné domy, kancelárie a obchodné priestory. Precízna príprava povrchov a profesionálna realizácia.</p>
+    </div>
+    <div class="srv-card">
+      <span class="srv-n">02</span>
+      <div class="srv-title">Maľovanie exteriérov</div>
+      <p class="srv-desc">Fasády, ploty a drevené konštrukcie. Dlhodobo odolné nátery z overených materiálov.</p>
+    </div>
+    <div class="srv-card">
+      <span class="srv-n">03</span>
+      <div class="srv-title">Tapetovanie</div>
+      <p class="srv-desc">Klasické, vinylové, textilné i luxusné tapety. Precízne miery, žiadne bubliny, žiadne viditeľné spoje.</p>
+    </div>
+    <div class="srv-card">
+      <span class="srv-n">04</span>
+      <div class="srv-title">Dekoratívne techniky</div>
+      <p class="srv-desc">Benátska stierka, štuk, farebné prechody a reliéfne povrchy. Pre tých, ktorí chcú viac ako štandard.</p>
+    </div>
+    <div class="srv-card">
+      <span class="srv-n">05</span>
+      <div class="srv-title">Poradenstvo</div>
+      <p class="srv-desc">Pomôžeme vybrať správne farby a materiály. Bezplatná obhliadka a cenová ponuka bez záväzkov.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="o-nas">
+  <div>
+    <span class="about-lbl">O nás</span>
+    <h2>30 rokov<br><em style="font-style:normal;color:#E8673A">na vašich stenách</em></h2>
+    <div class="about-rule"></div>
+    <p class="about-text">Firma Lumato s.r.o. (pôvodne TOMAL) sa profesionálnemu maľovaniu a tapetovaniu venuje od roku 1994. Za 30 rokov sme zrealizovali stovky projektov v Prešove a okolí.</p>
+    <p class="about-text">Každý zákazník dostáva plnú zodpovednosť. Remeselná presnosť a čistota pracoviska sú pre nás samozrejmosťou. Výsledok je vždy to, čo ste si predstavili.</p>
+    <a href="#kontakt" class="about-link">Dohovorte si obhliadku →</a>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-box"><span class="s4-big">30</span><span class="s4-desc">Rokov skúseností</span></div>
+    <div class="s4-box"><span class="s4-big">1 000+</span><span class="s4-desc">Dokončených projektov</span></div>
+    <div class="s4-box"><span class="s4-big">Prešov</span><span class="s4-desc">&amp; okolie</span></div>
+    <div class="s4-box"><span class="s4-big">2 roky</span><span class="s4-desc">Záruka na prácu</span></div>
+  </div>
+</section>
+
+<section class="cta-sec" id="kontakt">
+  <span class="sec-eye">Kontakt</span>
+  <h2><em>Váš projekt</em> nás čaká</h2>
+  <p class="cta-sub">Bezplatná obhliadka a cenová ponuka. Žiadne záväzky, žiadne prekvapenia.</p>
+  <div>
+    <a href="tel:+421948434345" class="btn-orange">Zavolajte nám</a>
+    <a href="mailto:info@lumato.sk" class="btn-outline">Napíšte e-mail</a>
+  </div>
+  <p class="cta-contact">
+    <a href="tel:+421948434345">+421 948 434 345</a> &nbsp;·&nbsp;
+    <a href="mailto:info@lumato.sk">info@lumato.sk</a> &nbsp;·&nbsp;
+    Prešov, 080 01
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="f-logo">LUMATO</div>
+  <div class="f-info">&copy; 2025 Lumato s.r.o. &nbsp;·&nbsp; Maľovanie &amp; Tapetovanie &nbsp;·&nbsp; Prešov</div>
+  <div class="f-links">
+    <a href="#sluzby">Služby</a>
+    <a href="#o-nas">O nás</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</footer>
+</body>
+</html>

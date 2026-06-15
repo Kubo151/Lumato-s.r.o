@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumato s.r.o. — Výber dizajnu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0F0F0D;color:#F5F0E8;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px}
+a{text-decoration:none;color:inherit}
+.header{text-align:center;margin-bottom:56px}
+.logo{font-family:'Playfair Display',serif;font-size:28px;letter-spacing:0.2em;text-transform:uppercase;color:#F5F0E8;margin-bottom:12px}
+.sub{font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,240,232,0.3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;width:100%;max-width:960px}
+.card{display:block;background:#1A1A16;border:1px solid rgba(255,255,255,0.06);overflow:hidden;transition:transform 0.2s,border-color 0.2s;position:relative}
+.card:hover{transform:translateY(-4px)}
+.card:hover.c1{border-color:rgba(201,148,58,0.5)}
+.card:hover.c2{border-color:rgba(232,103,58,0.5)}
+.card:hover.c3{border-color:rgba(110,158,114,0.5)}
+.card-preview{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.c1 .card-preview{background:#0D1B2A}
+.c2 .card-preview{background:#FAFAF8}
+.c3 .card-preview{background:#F1F4F2}
+.preview-text{font-size:36px;font-weight:800;opacity:0.12;text-transform:uppercase;letter-spacing:0.05em}
+.c1 .preview-text{font-family:'Playfair Display',serif;color:#C9943A}
+.c2 .preview-text{font-family:'Inter',sans-serif;color:#E8673A}
+.c3 .preview-text{font-family:'Inter',sans-serif;color:#6E9E72}
+.preview-pallete{position:absolute;bottom:0;left:0;right:0;height:8px;display:flex}
+.p{flex:1}
+.card-body{padding:24px 28px 28px}
+.card-num{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;display:block}
+.c1 .card-num{color:#C9943A}
+.c2 .card-num{color:#E8673A}
+.c3 .card-num{color:#6E9E72}
+.card-title{font-size:20px;font-weight:500;margin-bottom:8px;color:#F5F0E8}
+.card-desc{font-size:13px;line-height:1.65;color:rgba(245,240,232,0.45);margin-bottom:20px}
+.card-tag{display:inline-block;font-size:11px;letter-spacing:0.05em;color:rgba(245,240,232,0.25);margin-right:8px;margin-bottom:4px}
+.card-arrow{position:absolute;bottom:28px;right:28px;font-size:18px;opacity:0.3}
+.c1:hover .card-arrow{color:#C9943A;opacity:1}
+.c2:hover .card-arrow{color:#E8673A;opacity:1}
+.c3:hover .card-arrow{color:#6E9E72;opacity:1}
+.footer-note{margin-top:40px;font-size:12px;color:rgba(245,240,232,0.2);text-align:center}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">LUMATO</div>
+  <div class="sub">s.r.o. &nbsp;·&nbsp; Design koncepty &nbsp;·&nbsp; Vyberte si smer</div>
+</div>
+
+<div class="grid">
+  <a class="card c1" href="vzor.html">
+    <div class="card-preview">
+      <div class="preview-text">VZOR</div>
+      <div class="preview-pallete">
+        <div class="p" style="background:#0D1B2A"></div>
+        <div class="p" style="background:#142133"></div>
+        <div class="p" style="background:#C9943A"></div>
+        <div class="p" style="background:#E0A845"></div>
+        <div class="p" style="background:#F5F0E8"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <span class="card-num">Koncept 01</span>
+      <div class="card-title">Vzor — Remeslo &amp; Tradícia</div>
+      <p class="card-desc">Tmavomodrá s mosadzným zlatom. Seriózna, prémiová atmosféra. Tapetový vzor ako signature element. Playfair Display.</p>
+      <span class="card-tag">Navy · Gold</span>
+      <span class="card-tag">Playfair Display</span>
+      <span class="card-tag">Premium Dark</span>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+
+  <a class="card c2" href="prud.html">
+    <div class="card-preview">
+      <div class="preview-text" style="color:#111;font-family:Inter,sans-serif">PRÚD</div>
+      <div class="preview-pallete">
+        <div class="p" style="background:#FAFAF8;border-top:1px solid #ddd"></div>
+        <div class="p" style="background:#E8E8E2;border-top:1px solid #ddd"></div>
+        <div class="p" style="background:#E8673A"></div>
+        <div class="p" style="background:#3B8A9E"></div>
+        <div class="p" style="background:#F5C430"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <span class="card-num">Koncept 02</span>
+      <div class="card-title">Prúd — Moderný &amp; Dynamický</div>
+      <p class="card-desc">Čistá biela s oranžovým akcentom. Energetický rebrand. Paint pour blob v hero. Syne bold typ.</p>
+      <span class="card-tag">White · Orange</span>
+      <span class="card-tag">Syne + Inter</span>
+      <span class="card-tag">Fresh &amp; Bold</span>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+
+  <a class="card c3" href="svetlo.html">
+    <div class="card-preview">
+      <div class="preview-text" style="color:#2B4D3F;font-style:italic">Svetlo</div>
+      <div class="preview-pallete">
+        <div class="p" style="background:#2B4D3F"></div>
+        <div class="p" style="background:#6E9E72"></div>
+        <div class="p" style="background:#A8C4A6"></div>
+        <div class="p" style="background:#C4B99A"></div>
+        <div class="p" style="background:#F1F4F2;border-top:1px solid #ccc"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <span class="card-num">Koncept 03</span>
+      <div class="card-title">Svetlo — Minimálny &amp; Prémiový</div>
+      <p class="card-desc">Šalviová zelená na svetlom základe. Elegantný, vzdušný dizajn. Farebný swatch tower. Cormorant Garamond.</p>
+      <span class="card-tag">Sage · Sand</span>
+      <span class="card-tag">Cormorant Garamond</span>
+      <span class="card-tag">Minimal Luxury</span>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+</div>
+
+<p class="footer-note">Lumato s.r.o. &nbsp;·&nbsp; Maľovanie &amp; Tapetovanie &nbsp;·&nbsp; Prešov &nbsp;·&nbsp; 30 rokov skúseností</p>
+</body>
+</html>
