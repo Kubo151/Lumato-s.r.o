@@ -1,226 +1,318 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Lumato s.r.o. – Profesionálne maľovanie a tapetovanie. 30 rokov skúseností. Prešov a okolie.">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Lumato s.r.o. – 30 rokov profesionálneho maľovania a tapetovania. Prešov a okolie.">
 <title>Lumato s.r.o. | Maľovanie & Tapetovanie Prešov</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#FAFAF8;color:#111111;line-height:1.6}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111;line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
+:root{--or:#E8673A;--or2:#d4562a;--tl:#3B8A9E;--blk:#111;--gr:#F5F5F3;--bd:#E8E8E2}
 
-.design-bar{background:#111;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,0.32);letter-spacing:0.06em}
-.design-bar a{color:rgba(232,103,58,0.8);margin-left:12px}
-.design-bar .cur{color:#E8673A;font-weight:600}
+.switch{background:#111;padding:7px 56px;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.switch a{color:rgba(232,103,58,.7);margin-left:14px;transition:color .2s}.switch a:hover{color:var(--or)}
+.switch .cur{color:var(--or);font-weight:600}
 
-.site-nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 56px;background:rgba(250,250,248,0.97);backdrop-filter:blur(12px);border-bottom:1px solid #E4E4DE}
-.nav-logo{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.02em;color:#111}
-.nav-logo span{color:#E8673A}
+.nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:0 56px;height:66px;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.02em;color:#111}
+.nav-logo span{color:var(--or)}
 .nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:13px;color:rgba(17,17,17,0.48);transition:color 0.2s}
-.nav-links a:hover{color:#111}
-.nav-cta{padding:10px 22px;background:#111;font-size:12px;font-weight:500;color:#fff!important;transition:background 0.2s}
-.nav-cta:hover{background:#E8673A}
+.nav-links a{font-size:13px;color:rgba(17,17,17,.45);transition:color .2s}.nav-links a:hover{color:#111}
+.nav-tel{color:var(--or)!important;font-weight:600;font-size:13px}
+.nav-cta{padding:10px 22px;background:var(--blk);color:#fff!important;font-weight:500;font-size:12px;letter-spacing:.03em;transition:background .2s}.nav-cta:hover{background:var(--or)}
 
-.hero{min-height:88vh;display:flex;align-items:center;padding:80px 56px;position:relative;overflow:hidden;background:#FAFAF8}
-.hero-blob{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:600px;height:600px;pointer-events:none;z-index:1;opacity:0.88}
-.hero-con{position:relative;z-index:10;max-width:580px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;background:#E8673A;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px;border-radius:2px}
-.chip-dot{width:5px;height:5px;background:#fff;border-radius:50%}
-h1{font-family:'Syne',sans-serif;font-size:clamp(50px,6vw,88px);font-weight:800;line-height:0.92;letter-spacing:-0.03em;margin-bottom:26px}
-h1 .acc{color:#E8673A}
-.hero-sub{font-size:16px;line-height:1.72;color:#666;max-width:440px;margin-bottom:40px}
-.ctas{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:15px 34px;font-size:13px;font-weight:500;letter-spacing:0.02em;transition:all 0.2s;cursor:pointer}
-.btn-dark{background:#111;color:#fff}
-.btn-dark:hover{background:#E8673A}
-.btn-link{font-size:13px;color:#E8673A;display:flex;align-items:center;gap:6px;padding:15px 0}
-.btn-link:hover{color:#111}
-.hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid #E4E4DE;padding-top:0}
-.h-stat{flex:1;padding:28px 0;border-right:1px solid #E4E4DE}
-.h-stat:last-child{border-right:none}
-.s-num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:#E8673A;display:block;line-height:1}
-.s-lbl{display:block;font-size:11px;color:#999;margin-top:5px}
+/* HERO — editorial, type-first */
+.hero{min-height:92vh;display:flex;padding:0 56px;position:relative;overflow:hidden;background:#fff}
+.hero-con{display:flex;flex-direction:column;justify-content:center;flex:1;padding:80px 0;position:relative;z-index:5}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:var(--or);color:#fff;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:36px;border-radius:2px}
+.hero-tag-dot{width:5px;height:5px;background:#fff;border-radius:50%}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(58px,7.5vw,108px);font-weight:800;line-height:.88;letter-spacing:-.04em;margin-bottom:0;max-width:800px}
+.hero h1 .line-acc{color:var(--or)}
+.hero h1 .line-thin{font-weight:600;opacity:.7}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:56px;gap:40px;flex-wrap:wrap}
+.hero-sub{font-size:16px;line-height:1.72;color:#555;max-width:400px}
+.hero-ctas{display:flex;gap:12px;flex-shrink:0;align-items:center}
+.btn-blk{background:#111;color:#fff;padding:15px 36px;font-size:13px;font-weight:500;letter-spacing:.03em;display:inline-block;transition:background .2s}.btn-blk:hover{background:var(--or)}
+.btn-arr{color:var(--or);font-size:14px;display:flex;align-items:center;gap:6px;padding:15px 0;transition:gap .2s}.btn-arr:hover{gap:12px}
 
-.services{padding:88px 56px;border-top:1px solid #E4E4DE;background:#FAFAF8}
-.sec-eye{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#E8673A;margin-bottom:10px;display:block}
-h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;letter-spacing:-0.02em;margin-bottom:44px;color:#111}
-.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.srv-card{background:#fff;padding:36px 28px;border:1px solid #E8E8E2;transition:all 0.25s}
-.srv-card:hover{border-color:#E8673A;transform:translateY(-2px);box-shadow:0 8px 32px rgba(232,103,58,0.08)}
-.srv-n{font-family:'Syne',sans-serif;font-size:12px;color:#E8673A;font-weight:700;letter-spacing:0.1em;margin-bottom:18px;display:block}
-.srv-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;margin-bottom:10px;color:#111}
-.srv-desc{font-size:14px;line-height:1.72;color:#777}
+/* Color strip on right */
+.hero-strip{position:absolute;right:0;top:0;bottom:0;width:52px;display:flex;flex-direction:column;z-index:3}
+.strip-c{flex:1}
 
-.about{padding:88px 56px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;background:#F4F4F0;border-top:1px solid #E4E4DE}
-.about-lbl{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#E8673A;margin-bottom:14px;display:block}
-.about-text{font-size:15px;line-height:1.84;color:#555;margin-bottom:24px}
-.about-rule{width:44px;height:3px;background:#E8673A;margin-bottom:22px}
-.about-link{color:#111;font-size:13px;border-bottom:2px solid #E8673A;padding-bottom:2px;font-weight:500}
-.about-link:hover{color:#E8673A}
-.s4-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.s4-box{background:#fff;padding:28px 24px;border:1px solid #E8E8E2}
-.s4-big{font-family:'Syne',sans-serif;font-size:38px;color:#E8673A;font-weight:800;display:block;line-height:1;letter-spacing:-0.02em}
-.s4-desc{font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:#999;margin-top:8px;display:block}
+/* INTRO ROW */
+.intro-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.intro-cell{padding:28px 40px;border-right:1px solid var(--bd)}.intro-cell:last-child{border-right:none}
+.intro-n{font-family:'Syne',sans-serif;font-size:34px;font-weight:800;color:var(--or);display:block;line-height:1}
+.intro-l{font-size:11px;color:#999;margin-top:5px;display:block}
 
-.cta-sec{padding:88px 56px;text-align:center;background:#111;border-top:1px solid #222}
-.cta-sec .sec-eye{color:#E8673A}
-.cta-sec h2{color:#fff;margin-bottom:0}
-.cta-sec h2 em{font-style:normal;color:#E8673A}
-.cta-sub{font-size:16px;color:rgba(255,255,255,0.5);margin:14px 0 36px}
-.btn-orange{background:#E8673A;color:#fff;padding:15px 34px;font-size:13px;font-weight:500;display:inline-block;transition:background 0.2s}
-.btn-orange:hover{background:#d4562a}
-.btn-outline{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:14px 34px;font-size:13px;font-weight:500;display:inline-block;margin:4px 6px;transition:all 0.2s}
-.btn-outline:hover{border-color:#E8673A;color:#E8673A}
-.cta-contact{margin-top:28px;color:rgba(255,255,255,0.28);font-size:14px}
-.cta-contact a{color:#E8673A}
+/* SERVICES — editorial list */
+.services{padding:96px 56px;background:var(--gr);border-bottom:1px solid var(--bd)}
+.sec-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:10px}
+.sec-h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;letter-spacing:-.02em;margin-bottom:56px}
+.srv-list{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.srv-item{display:grid;grid-template-columns:56px 1fr;gap:0;padding:36px 0;border-bottom:1px solid var(--bd)}
+.srv-item:nth-child(odd){padding-right:64px;border-right:1px solid var(--bd)}
+.srv-item:nth-child(even){padding-left:64px}
+.srv-item:nth-last-child(-n+2){border-bottom:none}
+.srv-num{font-family:'Syne',sans-serif;font-size:13px;color:var(--or);font-weight:700;padding-top:4px}
+.srv-body .srv-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px}
+.srv-body .srv-desc{font-size:14px;line-height:1.72;color:#666}
+.srv-item-5{grid-column:1/3;border-bottom:none;border-top:1px solid var(--bd)}
+.srv-item-5 .srv-num,.srv-item-5 .srv-body{padding:36px 0}
 
-.site-footer{padding:36px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:#0D0D0B;border-top:1px solid #222}
-.f-logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#E8673A}
-.f-info{font-size:13px;color:rgba(255,255,255,0.25);text-align:center}
-.f-links a{color:rgba(255,255,255,0.3);font-size:13px;margin-left:16px}
-.f-links a:hover{color:#E8673A}
+/* GALLERY — feature + grid */
+.gallery{padding:96px 56px;background:#fff}
+.gallery-feat{height:480px;margin-top:56px;margin-bottom:3px;position:relative;overflow:hidden;cursor:pointer}
+.gallery-feat .ph-inner{position:absolute;inset:0;transition:transform .6s;background:linear-gradient(145deg,#2a3824,#4e6438,#3a4c2a)}
+.gallery-feat:hover .ph-inner{transform:scale(1.03)}
+.gallery-feat-cap{position:absolute;bottom:0;left:0;right:0;padding:28px 36px;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.gallery-feat-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:6px;display:block}
+.gallery-feat-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#fff}
+.gallery-row{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.gallery-row .ph{height:260px;position:relative;overflow:hidden;cursor:pointer}
+.gallery-row .ph-in{position:absolute;inset:0;transition:transform .5s}
+.gallery-row .ph:hover .ph-in{transform:scale(1.05)}
+.gallery-row .ph-cap{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(0,0,0,.6));font-size:11px;color:rgba(255,255,255,.85);opacity:0;transition:opacity .3s}
+.gallery-row .ph:hover .ph-cap{opacity:1}
+.gc1{background:linear-gradient(150deg,#c8b49a,#a08868,#7a6048)}
+.gc2{background:linear-gradient(140deg,#384858,#2a3848,#1e2c38)}
+.gc3{background:linear-gradient(155deg,#8a7460,#6a5442,#4a3428)}
+.gc4{background:linear-gradient(145deg,#d4c4a8,#b0a080,#8c7c5c)}
 
-@media(max-width:900px){.about{grid-template-columns:1fr;gap:40px}}
+/* ABOUT */
+.about{padding:96px 56px;background:var(--gr);border-top:1px solid var(--bd);display:grid;grid-template-columns:240px 1fr;gap:72px;align-items:start}
+.about-30{font-family:'Syne',sans-serif;font-size:clamp(120px,14vw,200px);font-weight:800;color:var(--or);line-height:.85;letter-spacing:-.06em;position:sticky;top:100px}
+.about-30-sub{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:#999;letter-spacing:.04em;text-transform:uppercase;margin-top:8px}
+.about-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:14px}
+.about h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+.about-text{font-size:15px;line-height:1.84;color:#555;margin-bottom:20px}
+.about-rule{width:44px;height:3px;background:var(--or);margin:24px 0}
+.about-link{color:#111;font-size:13px;font-weight:600;border-bottom:2px solid var(--or);padding-bottom:2px}.about-link:hover{color:var(--or)}
+
+/* PROCESS */
+.process{padding:80px 56px;background:#fff;border-top:1px solid var(--bd)}
+.proc-track{position:relative;margin-top:52px}
+.proc-track::before{content:'';position:absolute;top:20px;left:24px;right:24px;height:1px;background:var(--bd);z-index:0}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;z-index:1}
+.proc-step{padding:0 16px}
+.proc-dot{width:40px;height:40px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:20px}
+.proc-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px}
+.proc-desc{font-size:13px;line-height:1.7;color:#666}
+
+/* TESTIMONIALS */
+.testimonials{padding:96px 56px;background:var(--gr);border-top:1px solid var(--bd)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+.testi-card{background:#fff;padding:44px 36px;border-left:3px solid var(--or)}
+.testi-quote{font-size:42px;color:var(--or);font-weight:800;font-family:'Syne',sans-serif;line-height:1;margin-bottom:12px}
+.testi-text{font-size:16px;line-height:1.72;color:#333;margin-bottom:28px}
+.testi-divider{width:32px;height:2px;background:var(--or);margin-bottom:14px}
+.testi-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700}
+.testi-role{font-size:12px;color:#999;margin-top:2px}
+
+/* CTA */
+.cta{padding:96px 56px;text-align:center;background:#111;color:#fff}
+.cta .sec-label{color:var(--or)}
+.cta h2{font-family:'Syne',sans-serif;font-size:clamp(30px,4.5vw,60px);font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:#fff}
+.cta h2 em{font-style:normal;color:var(--or)}
+.cta-sub{font-size:17px;color:rgba(255,255,255,.45);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto}
+.btn-or{background:var(--or);color:#fff;padding:16px 40px;font-size:14px;font-weight:500;letter-spacing:.03em;display:inline-block;transition:background .2s;margin:4px 6px}.btn-or:hover{background:var(--or2)}
+.btn-outl-w{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:15px 40px;font-size:14px;display:inline-block;margin:4px 6px;transition:all .2s}.btn-outl-w:hover{border-color:var(--or);color:var(--or)}
+.cta-info{margin-top:32px;color:rgba(255,255,255,.2);font-size:13px}
+.cta-info a{color:var(--or)}
+
+/* FOOTER */
+.footer{background:#0D0D0B;border-top:1px solid #222}
+.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding:56px 56px 48px}
+.f-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--or);display:block;margin-bottom:14px}
+.f-logo span{color:rgba(232,103,58,.5)}
+.f-tagline{font-size:13px;color:rgba(255,255,255,.28);line-height:1.7;max-width:220px}
+.f-col h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:rgba(255,255,255,.3);margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase}
+.f-col a{display:block;font-size:13px;color:rgba(255,255,255,.28);margin-bottom:8px;transition:color .2s}.f-col a:hover{color:var(--or)}
+.footer-bar{padding:18px 56px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.15)}
+
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:22px;height:2px;background:#111;transition:all .25s;border-radius:1px}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-tel-m{display:none;padding:9px 18px;background:var(--or);color:#fff;font-size:12px;font-weight:600;white-space:nowrap;flex-shrink:0}
+@media(max-width:1100px){
+  .nav,.hero,.services,.gallery,.about,.process,.testimonials,.cta{padding-left:32px;padding-right:32px}
+  .srv-list{grid-template-columns:1fr}
+  .srv-item:nth-child(odd){border-right:none;padding-right:0}
+  .srv-item:nth-child(even){padding-left:0}
+  .srv-item-5{grid-column:1}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .about{grid-template-columns:1fr;gap:40px}
+  .about-30{position:static;font-size:100px}
+  .testi-grid{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:repeat(2,1fr)}
+  .gallery-row{grid-template-columns:1fr 1fr}
+  .proc-track::before{display:none}
+}
 @media(max-width:768px){
-  .site-nav,.hero,.services,.about,.cta-sec,.site-footer{padding-left:20px;padding-right:20px}
-  .design-bar{padding:8px 20px;font-size:10px}
-  .nav-links{display:none}
-  .hero-stats{flex-direction:column}
-  .h-stat{border-right:none;border-bottom:1px solid #E4E4DE;padding:20px 0}
-  h1{font-size:clamp(42px,10vw,60px)}
+  .switch{padding:7px 16px;font-size:9px}
+  .nav{padding:0 16px;height:60px}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:rgba(250,250,248,.98);padding:12px 16px 20px;border-bottom:1px solid var(--bd);z-index:99;gap:0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 4px;border-bottom:1px solid var(--bd);font-size:14px;color:#111}
+  .nav-links .nav-tel{border-bottom:none;color:var(--or)!important;padding-top:16px}
+  .nav-links .nav-cta{margin-top:12px;text-align:center;padding:13px;background:#111;color:#fff!important}
+  .hamburger{display:flex}
+  .nav-tel-m{display:block}
+  .hero{padding:56px 16px 40px;min-height:auto}
+  .hero h1{font-size:clamp(44px,12vw,64px);line-height:.92}
+  .hero-strip{width:20px}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:28px}
+  .hero-sub{max-width:100%}
+  .hero-ctas{flex-direction:column;width:100%;gap:10px}
+  .btn-blk{width:100%;text-align:center;display:block}
+  .intro-row{grid-template-columns:1fr 1fr}
+  .intro-cell{padding:18px 20px}
+  .services,.gallery,.about,.process,.testimonials,.cta{padding:56px 16px}
+  .sec-h2{margin-bottom:28px}
+  .gallery-feat{height:280px}
+  .gallery-row{grid-template-columns:1fr 1fr}
+  .gallery-row .ph{height:180px}
+  .about-30{font-size:clamp(80px,20vw,120px)}
+  .proc-steps{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr;gap:24px;padding:36px 16px 28px}
+  .footer-bar{padding:14px 16px;flex-direction:column;gap:4px;text-align:center}
 }
 </style>
 </head>
 <body>
 
-<div class="design-bar">
-  <span>Lumato s.r.o. — Design koncepty</span>
-  <span><a href="vzor.html">01 · Vzor</a><span class="cur">02 · Prúd</span><a href="svetlo.html">03 · Svetlo</a></span>
-</div>
+<div class="switch"><span>Lumato s.r.o. — design koncepty</span><span><a href="vzor.html">01 · Vzor</a><span class="cur">02 · Prúd</span><a href="svetlo.html">03 · Svetlo</a></span></div>
 
-<nav class="site-nav">
+<nav class="nav">
   <a href="#" class="nav-logo">LU<span>·</span>MA<span>·</span>TO</a>
-  <div class="nav-links">
-    <a href="#sluzby">Služby</a>
-    <a href="#o-nas">O nás</a>
-    <a href="#kontakt" class="nav-cta">Kontakt</a>
+  <div class="nav-links" id="d2nav">
+    <a href="#sluzby">Služby</a><a href="#galeria">Galéria</a><a href="#o-nas">O nás</a>
+    <a href="tel:+421948434345" class="nav-tel">+421 948 434 345</a>
+    <a href="#kontakt" class="nav-cta">Bezplatná obhliadka</a>
   </div>
+  <a href="tel:+421948434345" class="nav-tel-m">Zavolať</a>
+  <button class="hamburger" onclick="document.getElementById('d2nav').classList.toggle('open');this.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <section class="hero">
-  <!-- Paint pour blob -->
-  <svg class="hero-blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="bg" cx="36%" cy="43%" r="58%">
-        <stop offset="0%" stop-color="#3B8A9E"/>
-        <stop offset="38%" stop-color="#E8673A" stop-opacity="0.88"/>
-        <stop offset="78%" stop-color="#F5C430" stop-opacity="0.72"/>
-        <stop offset="100%" stop-color="#F5C430" stop-opacity="0.05"/>
-      </radialGradient>
-    </defs>
-    <path d="M255 68C338 47 432 90 456 176C480 262 455 342 397 386C347 428 278 453 212 431C146 409 103 352 109 292C115 232 148 163 202 124C232 103 220 80 255 68Z" fill="url(#bg)" opacity="0.88"/>
-    <ellipse cx="397" cy="432" rx="10" ry="30" fill="#E8673A" opacity="0.48" transform="rotate(-12 397 432)"/>
-    <ellipse cx="178" cy="456" rx="7" ry="22" fill="#3B8A9E" opacity="0.38"/>
-    <circle cx="462" cy="226" r="14" fill="#F5C430" opacity="0.52"/>
-    <circle cx="477" cy="306" r="8" fill="#E8673A" opacity="0.44"/>
-    <circle cx="88" cy="282" r="9" fill="#3B8A9E" opacity="0.28"/>
-    <circle cx="444" cy="158" r="6" fill="#E8673A" opacity="0.38"/>
-  </svg>
   <div class="hero-con">
-    <div class="chip"><span class="chip-dot"></span>Nová éra. Nové farby.</div>
-    <h1>Dajte<br><span class="acc">farbu</span><br>vášmu domovu.</h1>
-    <p class="hero-sub">Maľovanie, tapetovanie a povrchová úprava interiérov aj exteriérov. Prešov a okolie. 30 rokov skúseností v novom šate.</p>
-    <div class="ctas">
-      <a href="#kontakt" class="btn btn-dark">Nezáväzná obhliadka</a>
-      <a href="#sluzby" class="btn-link">Naše služby <span>→</span></a>
+    <div class="hero-tag"><span class="hero-tag-dot"></span>Prešov &amp; okolie · Est. 1994 · 30 rokov skúseností</div>
+    <h1><span class="line-acc">Dajte</span><br><span>farbu</span><br><span class="line-thin">vášmu domovu.</span></h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">Profesionálne maľovanie a tapetovanie interiérov aj exteriérov. Výsledky, ktoré vidíte. Kvalita, ktorú cítite.</p>
+      <div class="hero-ctas">
+        <a href="#kontakt" class="btn-blk">Nezáväzná obhliadka</a>
+        <a href="#galeria" class="btn-arr">Naše práce <span>→</span></a>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="h-stat"><span class="s-num">30</span><span class="s-lbl">Rokov skúseností</span></div>
-      <div class="h-stat"><span class="s-num">1 000+</span><span class="s-lbl">Projektov</span></div>
-      <div class="h-stat"><span class="s-num">100%</span><span class="s-lbl">Spokojnosť</span></div>
-    </div>
+  </div>
+  <!-- Vertical colour strip — signature element of this concept -->
+  <div class="hero-strip">
+    <div class="strip-c" style="background:#2B4D3F"></div>
+    <div class="strip-c" style="background:#E8673A"></div>
+    <div class="strip-c" style="background:#3B8A9E"></div>
+    <div class="strip-c" style="background:#C9943A"></div>
+    <div class="strip-c" style="background:#7A9E7E"></div>
+    <div class="strip-c" style="background:#F5C430"></div>
   </div>
 </section>
 
+<div class="intro-row">
+  <div class="intro-cell"><span class="intro-n">30</span><span class="intro-l">Rokov skúseností</span></div>
+  <div class="intro-cell"><span class="intro-n">1 000+</span><span class="intro-l">Dokončených projektov</span></div>
+  <div class="intro-cell"><span class="intro-n">2 roky</span><span class="intro-l">Záruka na prácu</span></div>
+  <div class="intro-cell"><span class="intro-n">Zdarma</span><span class="intro-l">Obhliadka a cenová ponuka</span></div>
+</div>
+
 <section class="services" id="sluzby">
-  <span class="sec-eye">Čo robíme</span>
-  <h2>Naše služby</h2>
-  <div class="srv-grid">
-    <div class="srv-card">
-      <span class="srv-n">01</span>
-      <div class="srv-title">Maľovanie interiérov</div>
-      <p class="srv-desc">Byty, rodinné domy, kancelárie a obchodné priestory. Precízna príprava povrchov a profesionálna realizácia.</p>
-    </div>
-    <div class="srv-card">
-      <span class="srv-n">02</span>
-      <div class="srv-title">Maľovanie exteriérov</div>
-      <p class="srv-desc">Fasády, ploty a drevené konštrukcie. Dlhodobo odolné nátery z overených materiálov.</p>
-    </div>
-    <div class="srv-card">
-      <span class="srv-n">03</span>
-      <div class="srv-title">Tapetovanie</div>
-      <p class="srv-desc">Klasické, vinylové, textilné i luxusné tapety. Precízne miery, žiadne bubliny, žiadne viditeľné spoje.</p>
-    </div>
-    <div class="srv-card">
-      <span class="srv-n">04</span>
-      <div class="srv-title">Dekoratívne techniky</div>
-      <p class="srv-desc">Benátska stierka, štuk, farebné prechody a reliéfne povrchy. Pre tých, ktorí chcú viac ako štandard.</p>
-    </div>
-    <div class="srv-card">
-      <span class="srv-n">05</span>
-      <div class="srv-title">Poradenstvo</div>
-      <p class="srv-desc">Pomôžeme vybrať správne farby a materiály. Bezplatná obhliadka a cenová ponuka bez záväzkov.</p>
-    </div>
+  <span class="sec-label">Čo robíme</span>
+  <h2 class="sec-h2">Naše služby</h2>
+  <div class="srv-list">
+    <div class="srv-item"><div class="srv-num">01</div><div class="srv-body"><div class="srv-title">Maľovanie interiérov</div><p class="srv-desc">Byty, domy, kancelárie, obchodné priestory. Precízna príprava povrchov, čistota na pracovisku, výsledok bez kompromisov.</p></div></div>
+    <div class="srv-item"><div class="srv-num">02</div><div class="srv-body"><div class="srv-title">Maľovanie exteriérov</div><p class="srv-desc">Fasády, ploty, drevené konštrukcie. Dlhodobo odolné nátery, ktoré zvládnu počasie aj roky.</p></div></div>
+    <div class="srv-item"><div class="srv-num">03</div><div class="srv-body"><div class="srv-title">Tapetovanie</div><p class="srv-desc">Klasické, vinylové, textilné i luxusné tapety. Žiadne bubliny, žiadne spoje — len dokonalý výsledok.</p></div></div>
+    <div class="srv-item"><div class="srv-num">04</div><div class="srv-body"><div class="srv-title">Dekoratívne techniky</div><p class="srv-desc">Benátska stierka, štuk, reliéfy, farebné prechody. Unikátne povrchy pre náročné interiéry.</p></div></div>
+    <div class="srv-item srv-item-5"><div class="srv-num">05</div><div class="srv-body"><div class="srv-title">Poradenstvo a návrh</div><p class="srv-desc">Pomôžeme vybrať správne farby, materiály aj postup. Bezplatná obhliadka a cenová ponuka bez záväzkov — vždy pred začatím prác.</p></div></div>
+  </div>
+</section>
+
+<section class="gallery" id="galeria">
+  <span class="sec-label">Naše práce</span>
+  <h2 class="sec-h2">Výsledky, ktoré hovoria za seba</h2>
+  <div class="gallery-feat">
+    <div class="ph-inner"></div>
+    <div class="gallery-feat-cap"><span class="gallery-feat-tag">Interiér · Prešov</span><div class="gallery-feat-title">Kompletná rekonštrukcia obývačky a jedálne — nová farba, nové tapety, nový priestor</div></div>
+  </div>
+  <div class="gallery-row">
+    <div class="ph"><div class="ph-in gc1"></div><div class="ph-cap">Tapetovanie spálne — luxusná tapeta</div></div>
+    <div class="ph"><div class="ph-in gc2"></div><div class="ph-cap">Fasáda rodinného domu</div></div>
+    <div class="ph"><div class="ph-in gc3"></div><div class="ph-cap">Firemné kancelárie, Prešov</div></div>
+    <div class="ph"><div class="ph-in gc4"></div><div class="ph-cap">Benátska stierka — detailný záber</div></div>
   </div>
 </section>
 
 <section class="about" id="o-nas">
   <div>
-    <span class="about-lbl">O nás</span>
-    <h2>30 rokov<br><em style="font-style:normal;color:#E8673A">na vašich stenách</em></h2>
-    <div class="about-rule"></div>
-    <p class="about-text">Firma Lumato s.r.o. (pôvodne TOMAL) sa profesionálnemu maľovaniu a tapetovaniu venuje od roku 1994. Za 30 rokov sme zrealizovali stovky projektov v Prešove a okolí.</p>
-    <p class="about-text">Každý zákazník dostáva plnú zodpovednosť. Remeselná presnosť a čistota pracoviska sú pre nás samozrejmosťou. Výsledok je vždy to, čo ste si predstavili.</p>
-    <a href="#kontakt" class="about-link">Dohovorte si obhliadku →</a>
+    <div class="about-30">30</div>
+    <div class="about-30-sub">rokov<br>skúseností</div>
   </div>
-  <div class="s4-grid">
-    <div class="s4-box"><span class="s4-big">30</span><span class="s4-desc">Rokov skúseností</span></div>
-    <div class="s4-box"><span class="s4-big">1 000+</span><span class="s4-desc">Dokončených projektov</span></div>
-    <div class="s4-box"><span class="s4-big">Prešov</span><span class="s4-desc">&amp; okolie</span></div>
-    <div class="s4-box"><span class="s4-big">2 roky</span><span class="s4-desc">Záruka na prácu</span></div>
-  </div>
-</section>
-
-<section class="cta-sec" id="kontakt">
-  <span class="sec-eye">Kontakt</span>
-  <h2><em>Váš projekt</em> nás čaká</h2>
-  <p class="cta-sub">Bezplatná obhliadka a cenová ponuka. Žiadne záväzky, žiadne prekvapenia.</p>
   <div>
-    <a href="tel:+421948434345" class="btn-orange">Zavolajte nám</a>
-    <a href="mailto:info@lumato.sk" class="btn-outline">Napíšte e-mail</a>
+    <span class="about-label">O nás</span>
+    <h2>30 rokov na vašich stenách</h2>
+    <div class="about-rule"></div>
+    <p class="about-text">Firma Lumato s.r.o. (pôvodne TOMAL) sa profesionálnemu maľovaniu a tapetovaniu venuje od roku 1994. Za tri dekády sme odovzdali stovky projektov — od menších bytov až po rozsiahle komerčné rekonštrukcie.</p>
+    <p class="about-text">Každý zákazník dostáva plnú pozornosť. Pracujeme čisto, dodržiavame termíny a nestávame sa, kým nie je výsledok presne taký, aký sme sľúbili.</p>
+    <a href="#kontakt" class="about-link">Dohovorte si bezplatnú obhliadku →</a>
   </div>
-  <p class="cta-contact">
-    <a href="tel:+421948434345">+421 948 434 345</a> &nbsp;·&nbsp;
-    <a href="mailto:info@lumato.sk">info@lumato.sk</a> &nbsp;·&nbsp;
-    Prešov, 080 01
-  </p>
 </section>
 
-<footer class="site-footer">
-  <div class="f-logo">LUMATO</div>
-  <div class="f-info">&copy; 2025 Lumato s.r.o. &nbsp;·&nbsp; Maľovanie &amp; Tapetovanie &nbsp;·&nbsp; Prešov</div>
-  <div class="f-links">
-    <a href="#sluzby">Služby</a>
-    <a href="#o-nas">O nás</a>
-    <a href="#kontakt">Kontakt</a>
+<section class="process">
+  <span class="sec-label">Ako pracujeme</span>
+  <h2 class="sec-h2">Od obhliadky po odovzdanie</h2>
+  <div class="proc-track">
+    <div class="proc-steps">
+      <div class="proc-step"><div class="proc-dot">1</div><div class="proc-title">Obhliadka</div><p class="proc-desc">Prídeme sa pozrieť, vypočujeme vaše predstavy a navrhneme optimálne riešenie.</p></div>
+      <div class="proc-step"><div class="proc-dot">2</div><div class="proc-title">Cenová ponuka</div><p class="proc-desc">Do 48 hodín máte presnú ponuku. Žiadne skryté poplatky, žiadne prekvapenia.</p></div>
+      <div class="proc-step"><div class="proc-dot">3</div><div class="proc-title">Realizácia</div><p class="proc-desc">Pracujeme rýchlo a čisto. Chránime nábytok, po práci upraceme.</p></div>
+      <div class="proc-step"><div class="proc-dot">4</div><div class="proc-title">Odovzdanie</div><p class="proc-desc">Spoločná kontrola. 2-ročná záruka na každú prácu. Váš výsledok, naša zodpovednosť.</p></div>
+    </div>
   </div>
+</section>
+
+<section class="testimonials">
+  <span class="sec-label">Čo hovoria klienti</span>
+  <h2 class="sec-h2">Spokojní zákazníci</h2>
+  <div class="testi-grid">
+    <div class="testi-card"><div class="testi-quote">"</div><p class="testi-text">Výsledok prekonal naše očakávania. Pracovali čisto, rýchlo a za rozumnú cenu. Odporúčam každému.</p><div class="testi-divider"></div><div class="testi-name">Marta K.</div><div class="testi-role">Rekonštrukcia bytu, Prešov</div></div>
+    <div class="testi-card"><div class="testi-quote">"</div><p class="testi-text">Kanceláriu sme mali vymalovanú za jeden víkend. V pondelok ráno sme sedeli v čistom. Profesionáli na slovo vzatí.</p><div class="testi-divider"></div><div class="testi-name">Ing. Tomáš H.</div><div class="testi-role">Firemné priestory, Prešov</div></div>
+    <div class="testi-card"><div class="testi-quote">"</div><p class="testi-text">Fasáda domu vyzerá ako nová. Pán Martin poradil s farbou, práca bola hotová za 3 dni. Presne ako sľúbili.</p><div class="testi-divider"></div><div class="testi-name">Peter &amp; Jana S.</div><div class="testi-role">Exteriér rodinného domu</div></div>
+  </div>
+</section>
+
+<section class="cta" id="kontakt">
+  <span class="sec-label">Kontakt</span>
+  <h2>Začneme <em>vaším projektom</em></h2>
+  <p class="cta-sub">Bezplatná obhliadka a cenová ponuka. Žiadne záväzky — len úprimný rozhovor o tom, čo chcete dosiahnuť.</p>
+  <div><a href="tel:+421948434345" class="btn-or">+421 948 434 345</a><a href="mailto:info@lumato.sk" class="btn-outl-w">Napíšte e-mail</a></div>
+  <p class="cta-info"><a href="mailto:info@lumato.sk">info@lumato.sk</a> &nbsp;·&nbsp; Prešov, 080 01</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div><span class="f-logo">LU<span>·</span>MA<span>·</span>TO</span><p class="f-tagline">Profesionálne maľovanie a tapetovanie. Prešov a okolie. 30 rokov v remesle.</p></div>
+    <div class="f-col"><h4>Služby</h4><a href="#sluzby">Maľovanie interiérov</a><a href="#sluzby">Maľovanie exteriérov</a><a href="#sluzby">Tapetovanie</a><a href="#sluzby">Dekoratívne techniky</a></div>
+    <div class="f-col"><h4>Firma</h4><a href="#o-nas">O nás</a><a href="#galeria">Galéria</a><a href="#kontakt">Kontakt</a></div>
+    <div class="f-col"><h4>Kontakt</h4><a href="tel:+421948434345">+421 948 434 345</a><a href="mailto:info@lumato.sk">info@lumato.sk</a><a href="#">Prešov, 080 01</a></div>
+  </div>
+  <div class="footer-bar"><span>&copy; 2025 Lumato s.r.o.</span><span>Maľovanie &amp; Tapetovanie · Prešov</span></div>
 </footer>
-</body>
-</html>
+</body></html>
